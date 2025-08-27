@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check-in App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header class="header">
+          <h1>📝 Dagelijkse Check-in</h1>
+          <p class="date" id="currentDate"></p>
+        </header>
+
+        <form class="checkin-form" id="checkinForm">
+          <div class="question-group">
+            <label for="yesterday">
+              <span class="icon">🔙</span>
+              Wat heb je gisteren gedaan?
+            </label>
+            <textarea 
+              id="yesterday" 
+              name="yesterday" 
+              placeholder="Beschrijf wat je gisteren hebt bereikt..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="question-group">
+            <label for="today">
+              <span class="icon">🎯</span>
+              Wat ga je vandaag doen?
+            </label>
+            <textarea 
+              id="today" 
+              name="today" 
+              placeholder="Wat zijn je plannen voor vandaag..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Check-in Opslaan</span>
+          </button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+          ✅ Check-in succesvol opgeslagen!
+        </div>
+
+        <section class="history-section">
+          <h2>📚 Eerdere Check-ins</h2>
+          <div class="history-list" id="historyList">
+            <p class="no-history">Nog geen check-ins. Begin vandaag!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
